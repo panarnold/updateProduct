@@ -4,7 +4,7 @@
 
 import openpyxl
 
-wb = openpyxl.load_workbook('produceSalex.xlsx')
+wb = openpyxl.load_workbook('produceSales.xlsx')
 
 sheet = wb['Sheet']
 
@@ -18,3 +18,4 @@ for row_num in range(2, sheet.max_row):
         sheet.cell(row = row_num, column = 2).value = PRICE_UPDATES[produce_name]
 
 wb.save('updatedProduceSales.xlsx')
+print('aand it\'s done, thank you, bye bye')
